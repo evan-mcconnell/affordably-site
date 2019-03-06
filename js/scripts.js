@@ -19,6 +19,11 @@ $(document).ready( function() {
   $("#next-button").click(function(){
       showNextCard();
   });
+
+  $(".see-more").click(function(){
+      showNextCard();
+  });
+
   console.log(cards)
 });
 
@@ -27,16 +32,6 @@ $(document).ready( function() {
 
 
 
-
-
-
-
-//
-//
-// if ((cards.length % 3) === 0 ) {
-//   cardIndex=0;
-// }
-//
 
 
 
