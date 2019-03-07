@@ -8,9 +8,9 @@ $(document).ready( function() {
 
   function showNextCard() {
     cards.eq(cardIndex % cards.length)
-    .fadeOut(2000);
+    .fadeOut(1000);
     ++cardIndex;
-    cards.eq(cardIndex % cards.length).fadeIn(2000)
+    cards.eq(cardIndex % cards.length).fadeIn(1000)
   };
 
   $("#next-button").click(function(){

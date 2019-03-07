@@ -173,8 +173,10 @@ h1{
   color: black;
   border: 1px solid black;
   font-weight: lighter;
-  height: 30px;
+  height: 3vw;
 }
+
+
 
 .see-more{
   display: none;
@@ -295,7 +297,7 @@ footer{
 #social{
     list-style-type: none;
     text-align: center;
-    margin: 3% auto 5% auto;
+    margin: 4% auto 5% auto;
     ul{
     width: 40%;
     max-width: 550px;
@@ -304,11 +306,8 @@ footer{
     justify-content: space-around;
     }
     i{
-      width: 50px;
-      height: 50px;
-      border: 1px solid white;
       border-radius: 50%;
-      padding-top: 25%;
+      padding: 9px;
       &:hover{
         background-color: white;
         color: $darkblue;
@@ -345,6 +344,11 @@ footer{
     padding: 2% 0 3% 0;
   }
 }
+@media only screen and (max-width: 850px ){
+  #next-button{
+    height: 4vw;
+  }
+}
 
 @media only screen and (max-width: 750px ){
   .card  {
@@ -366,7 +370,6 @@ footer{
         font-size: 0.6em;
       }
     }
-
   }
 }
 
@@ -474,6 +477,31 @@ footer{
       margin: 44px auto 74px auto;
     }
   }
+
+  .cards{
+    background-color: #f4f6f9;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 20%;
+    width: 100%;
+    border-bottom: 3px solid $darkblue;
+    .card{
+      height: 100%;
+      width: 100%;
+      display: none;
+      grid-column: 1 / 4;
+      grid-row: 1 / span 2;
+      text-align: center;
+      padding: 115px 10% 10% 10%;
+      }
+    }
+    #next-button{
+      height: 50px;
+      i{
+        height: 40px;
+        margin-bottom: 10px;
+      }
+    }
 }
 
 @media only screen and (min-width: 2000px){
