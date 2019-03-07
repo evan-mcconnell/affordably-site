@@ -36,7 +36,7 @@ p {
   .header h1 {
     font-size: 3vw; }
   .header button {
-    font-size: .7vw; }
+    font-size: 1.1vw; }
 
 nav {
   font-weight: 300;
@@ -47,7 +47,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 3% 15px 0 8%; }
+  padding: 2% 0px 0 8%; }
   nav a {
     color: black;
     text-decoration: none;
@@ -57,6 +57,8 @@ nav {
       color: #002d56; }
   nav span {
     height: 34px; }
+  nav .nav-left {
+    margin-left: -5%; }
   nav .nav-right {
     display: flex;
     flex-direction: row;
@@ -64,11 +66,11 @@ nav {
     align-items: center;
     width: 55%;
     height: 50px;
-    margin-right: 5%;
+    margin-right: 3%;
     padding: 10px 20px 40px 20px;
     text-align: center;
     border-radius: 10px;
-    background-color: rgba(89, 117, 146, 0.3); }
+    background-color: rgba(255, 255, 255, 0.6); }
 
 h1 {
   grid-row-start: 2;
@@ -81,16 +83,20 @@ h1 {
 
 .btn {
   font-weight: 400;
-  font-size: 0.5vw;
-  line-height: 1.2vw;
+  font-size: 1vw;
+  line-height: 1vw;
   background-color: #002d56;
   border: none;
-  width: 8%;
+  width: 10%;
+  height: 60%;
   grid-row-start: 3;
   grid-column-start: 1;
   align-self: end;
   border-radius: 50px;
   box-shadow: 1px 1px 10px #597592; }
+  .btn:hover {
+    cursor: pointer;
+    background-color: lightblue; }
 
 .cards {
   background-color: #f4f6f9;
@@ -156,8 +162,7 @@ h1 {
   padding: 2% 0 4% 0;
   background-color: rgba(0, 45, 86, 0.95);
   color: white;
-  border-top: 3px solid lightgray;
-  border-bottom: 3px solid lightgray; }
+  border-top: 3px solid lightgray; }
   #get-started h2 {
     padding: 1%; }
   #get-started .btn-group {
@@ -169,12 +174,70 @@ h1 {
     border-bottom-left-radius: 20px;
     width: 200px; }
   #get-started button {
-    margin: 0;
     height: 38px;
     width: 120px;
     font-size: 0.8em;
     color: #002d56;
     background-color: lightgray; }
+    #get-started button:hover {
+      color: white;
+      background-color: gray; }
+
+footer {
+  font-family: "Times";
+  width: 100%;
+  height: 20%;
+  max-height: 500px;
+  background-color: rgba(0, 45, 86, 0.95);
+  color: white;
+  padding: 3% 0 4% 0; }
+  footer ul {
+    list-style-type: none;
+    font-weight: 100; }
+    footer ul li {
+      font-size: .9em;
+      margin-top: 2.5px; }
+  footer > ul {
+    width: 70%;
+    border-top: 1px solid #f3f3f3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;
+    padding-top: 4%;
+    margin: auto; }
+    footer > ul > li {
+      padding: 25px; }
+  footer span {
+    font-weight: bold;
+    font-size: 1em; }
+  footer a {
+    color: white;
+    text-decoration: none; }
+    footer a:hover {
+      text-decoration: none;
+      color: lightblue; }
+
+#social {
+  list-style-type: none;
+  text-align: center;
+  margin: 3% auto 5% auto; }
+  #social ul {
+    width: 40%;
+    max-width: 550px;
+    margin: 2% auto 0 auto;
+    display: flex;
+    justify-content: space-around; }
+  #social i {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding-top: 25%; }
+    #social i:hover {
+      background-color: white;
+      color: #002d56;
+      cursor: pointer; }
 
 @media only screen and (max-width: 1000px) {
   .header h1 {
@@ -185,12 +248,15 @@ h1 {
   .header button {
     width: 120px;
     height: 35px;
-    font-size: .25em;
+    font-size: .8em;
     grid-row-start: 4;
     align-self: start; }
 
   .card p {
-    padding: 5px 20% 0 20%; } }
+    padding: 5px 20% 0 20%; }
+
+  footer {
+    padding: 2% 0 3% 0; } }
 @media only screen and (max-width: 750px) {
   .card p {
     font-size: 14px; }
@@ -229,7 +295,8 @@ h1 {
       padding: 0;
       margin: 0;
       padding-top: 10px;
-      justify-content: space-around; }
+      justify-content: space-around;
+      background-color: rgba(89, 117, 146, 0.6); }
 
   #next-button {
     display: none; }
@@ -259,7 +326,10 @@ h1 {
     .section h2 {
       font-size: 1.2em; }
     .section p {
-      font-size: 0.8em; } }
+      font-size: 0.8em; }
+
+  footer {
+    max-height: 600px; } }
 @keyframes smooth-grow {
   from {
     width: 55%;
@@ -273,7 +343,14 @@ h1 {
     grid-template-rows: 25% 30% 15% 30%; }
 
   nav {
-    padding-top: 20px; } }
+    padding-top: 20px; }
+
+  footer {
+    padding: 50px 0 70px 0; }
+    footer > ul {
+      padding-top: 60px; }
+    footer #social {
+      margin: 44px auto 74px auto; } }
 @media only screen and (min-width: 2000px) {
   .container {
     max-width: 70%; } }

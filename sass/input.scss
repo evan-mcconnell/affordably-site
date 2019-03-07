@@ -67,10 +67,9 @@ p{
     font-size: 3vw;
   }
   button{
-    font-size: .7vw;
+    font-size: 1.1vw;
   }
 }
-
 nav{
   font-weight:300;
   font-family: $nav-font;
@@ -80,7 +79,7 @@ nav{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 3% 15px 0 8%;
+  padding: 2% 0px 0 8%;
   a{
     color: black;
     text-decoration: none;
@@ -93,6 +92,10 @@ nav{
     span {
       height: 34px;
     }
+
+  .nav-left{
+    margin-left: -5%;
+  }
   .nav-right {
     display: flex;
     flex-direction: row;
@@ -100,11 +103,11 @@ nav{
     align-items: center;
     width: 55%;
     height: 50px;
-    margin-right: 5%;
+    margin-right: 3%;
     padding: 10px 20px 40px 20px;
     text-align: center;
     border-radius: 10px;
-    background-color: transparentize(#597592, 0.7);
+    background-color: transparentize(white, 0.4);
   }
 }
 
@@ -120,16 +123,21 @@ h1{
 
 .btn{
   font-weight: 400;
-  font-size: 0.5vw;
-  line-height: 1.2vw;
+  font-size: 1vw;
+  line-height: 1vw;
   background-color: $darkblue;
   border: none;
-  width: 8%;
+  width: 10%;
+  height: 60%;
   grid-row-start: 3;
   grid-column-start: 1;
   align-self: end;
   border-radius: 50px;
   box-shadow: 1px 1px 10px #597592;
+  &:hover{
+    cursor: pointer;
+    background-color: lightblue;
+  }
 }
 
 .cards{
@@ -210,7 +218,7 @@ h1{
   background-color: transparentize($darkblue, 0.05);
   color: white;
   border-top: 3px solid lightgray;
-  border-bottom: 3px solid lightgray;
+  // border-bottom: 3px solid lightgray;
   h2 {
     padding: 1%;
   }
@@ -226,13 +234,85 @@ h1{
   }
 
   button {
-    margin: 0;
     height: 38px;
     width: 120px;
     font-size: 0.8em;
     color: $darkblue;
     background-color: lightgray;
+    &:hover{
+      color: white;
+      background-color: gray;
+    }
   }
+}
+
+footer{
+  font-family: "Times";
+  width: 100%;
+  height: 20%;
+  max-height: 500px;
+  background-color: transparentize($darkblue, 0.05);
+  color: white;
+  padding: 3% 0 4% 0;
+    ul{
+      list-style-type: none;
+      font-weight: 100;
+        li{
+          font-size: .9em;
+          margin-top: 2.5px;
+        }
+    }
+    & > ul{
+      width: 70%;
+      border-top: 1px solid $lightgray;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 2%;
+      padding-top: 4%;
+      margin: auto;
+      & > li {
+        padding: 25px;
+      }
+    }
+    span{
+      font-weight: bold;
+      font-size: 1em;
+    }
+    a{
+      color: white;
+      text-decoration: none;
+      &:hover{
+      text-decoration: none;
+      color: lightblue;
+      }
+    }
+
+}
+
+#social{
+    list-style-type: none;
+    text-align: center;
+    margin: 3% auto 5% auto;
+    ul{
+    width: 40%;
+    max-width: 550px;
+    margin: 2% auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    }
+    i{
+      width: 50px;
+      height: 50px;
+      border: 1px solid white;
+      border-radius: 50%;
+      padding-top: 25%;
+      &:hover{
+        background-color: white;
+        color: $darkblue;
+        cursor: pointer;
+      }
+    }
 }
 
 
@@ -249,7 +329,7 @@ h1{
     button{
     width: 120px;
     height: 35px;
-    font-size: .25em;
+    font-size: .8em;
     grid-row-start: 4;
     align-self: start;
     }
@@ -258,6 +338,9 @@ h1{
     p {
       padding: 5px 20% 0 20%;
     }
+  }
+  footer {
+    padding: 2% 0 3% 0;
   }
 }
 
@@ -314,12 +397,12 @@ h1{
     .nav-right{
       font-size: 1em;
       border-radius: 0;
-      // width: 100%;
       animation: smooth-grow 0.5s ease-in forwards;
       padding: 0;
       margin: 0;
       padding-top: 10px;
       justify-content: space-around;
+      background-color: transparentize(#597592, 0.4);
     }
   }
   #next-button{
@@ -356,6 +439,9 @@ h1{
       font-size: 0.8em;
     }
   }
+  footer {
+    max-height: 600px;
+  }
 }
 
 @keyframes smooth-grow {
@@ -376,6 +462,15 @@ h1{
   }
   nav {
     padding-top: 20px;
+  }
+  footer  {
+    padding: 50px 0 70px 0;
+    & > ul{
+      padding-top: 60px;
+    }
+    #social {
+      margin: 44px auto 74px auto;
+    }
   }
 }
 
