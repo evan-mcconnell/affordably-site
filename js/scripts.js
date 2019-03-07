@@ -1,9 +1,6 @@
 
-
-
-
-
 $(document).ready( function() {
+
   var cards = $(".card");
   cards.eq(0).show();
 
@@ -24,11 +21,8 @@ $(document).ready( function() {
       showNextCard();
   });
 
-  console.log(cards)
+  AOS.init();
 });
-
-
-
 
 
 

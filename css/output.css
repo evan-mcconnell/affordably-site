@@ -3,7 +3,7 @@
   padding: 0; }
 
 body {
-  background-color: lightgray;
+  background-color: rgba(195, 219, 216, 0.4);
   font-family: "Laila", serif; }
 
 p {
@@ -24,7 +24,9 @@ p {
   grid-template-rows: 10% 25% 10% 55%;
   width: 100%;
   height: 700px;
-  justify-items: center; }
+  margin-bottom: 3%;
+  justify-items: center;
+  border-bottom: 4px solid #002d56; }
   .header picture {
     grid-row: 1 / 5;
     grid-column: 1 / span 2;
@@ -99,7 +101,9 @@ h1 {
   grid-template-rows: 1fr 20%;
   width: 100%;
   height: 420px;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  border: 1px solid #597592;
+  border-radius: 5px; }
   .cards .card {
     height: 100%;
     width: 100%;
@@ -128,7 +132,46 @@ h1 {
   display: none; }
 
 .sections {
-  background-color: white; }
+  text-align: center;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%; }
+  .sections .section {
+    border: 1px solid #597592;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px #002d56;
+    background-color: white;
+    max-width: 40%;
+    min-width: 600px;
+    padding: 5%;
+    margin: 2%; }
+
+#get-started {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid #597592;
+  border-radius: 5px;
+  padding: 2% 0 4% 0; }
+  #get-started h2 {
+    padding: 1%; }
+  #get-started .btn-group {
+    width: 50%;
+    margin: auto;
+    max-width: 400px; }
+  #get-started input {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 200px; }
+  #get-started button {
+    margin: 0;
+    height: 38px;
+    width: 120px;
+    font-size: 0.8em;
+    color: white; }
 
 @media only screen and (max-width: 1000px) {
   .header h1 {
@@ -149,7 +192,15 @@ h1 {
   .card p {
     font-size: 14px; }
   .card h2 {
-    font-size: 24px; } }
+    font-size: 24px; }
+
+  #get-started .btn-group {
+    width: 80%; }
+    #get-started .btn-group input {
+      width: 120px; }
+    #get-started .btn-group button {
+      width: 100px;
+      font-size: 0.6em; } }
 @media only screen and (max-width: 600px) {
   .container {
     max-width: 100%; }
@@ -192,7 +243,17 @@ h1 {
       font-weight: 200; }
     .see-more:hover {
       color: black;
-      cursor: pointer; } }
+      cursor: pointer; }
+
+  .section {
+    max-width: 100%;
+    min-width: 100% !important;
+    padding: 0;
+    margin: 0; }
+    .section h2 {
+      font-size: 1.2em; }
+    .section p {
+      font-size: 0.8em; } }
 @keyframes smooth-grow {
   from {
     width: 55%;
