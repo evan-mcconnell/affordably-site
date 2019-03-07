@@ -280,6 +280,12 @@ h1{
   .container {
     max-width: 100%;
   }
+  .cards{
+    margin-bottom: 0;
+  }
+  .card:nth-child(1){
+
+  }
   .card:nth-child(3){
     p{
       padding: 0 5% 0 5%;
@@ -317,7 +323,7 @@ h1{
     grid-column-start: 1;
     grid-row-start: 2;
     justify-self: center;
-    align-self: start;
+    align-self: end;
     background-color: white;
     color: gray;
     text-decoration: underline;
