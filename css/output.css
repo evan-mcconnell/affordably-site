@@ -104,7 +104,8 @@ h1 {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 20%;
   width: 100%;
-  border-bottom: 3px solid #002d56; }
+  border-bottom: 3px solid #002d56;
+  min-height: 486px; }
   .cards .card {
     height: 100%;
     width: 100%;

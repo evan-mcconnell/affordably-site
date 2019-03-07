@@ -147,6 +147,7 @@ h1{
   grid-template-rows: 1fr 20%;
   width: 100%;
   border-bottom: 3px solid $darkblue;
+  min-height: 486px;
   .card{
     height: 100%;
     width: 100%;
